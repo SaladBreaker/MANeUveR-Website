@@ -1,0 +1,67 @@
+{
+    "Application": "SecureBilling",
+    "Components": [
+        {
+            "Name": "CodingService",
+            "Restrictions": {
+                "CPU": 4,
+                "Memory": 4096,
+                "Storage": 1024
+            }
+        },
+        {
+            "Name": "SecurityManager",
+            "Restrictions": {
+                "CPU": 2,
+                "Memory": 2048,
+                "Storage": 512
+            }
+        },
+        {
+            "Name": "Gateway",
+            "Restrictions": {
+                "CPU": 4,
+                "Memory": 4096,
+                "Storage": 512
+            }
+        },
+        {
+            "Name": "SQLServer ",
+            "Restrictions": {
+                "CPU": 2,
+                "Memory": 512,
+                "Storage": 2000
+            }
+        },
+        {
+            "Name": "LoadBalancer",
+            "Restrictions": {
+                "CPU": 4,
+                "Memory": 2048,
+                "Storage": 512
+            }
+        }
+    ],
+    "Restrictions": [
+        {
+            "Type": "Conflict",
+            "AlphaComponent": "CodingService",
+            "Components": ["SecurityManager", "Gateway", "SQLServer", "LoadBalancer"]
+        },
+        {
+            "Type": "Conflict",
+            "AlphaComponent": "LoadBalancer",
+            "Components": ["SQLServer", "Gateway"]
+        },
+        {
+            "Type": "EqualBound",
+            "Components": ["CodingService"],
+            "Bound": 1
+        },
+        {
+            "Type": "EqualBound",
+            "Components": ["LoadBalancer"],
+            "Bound": 1
+        }
+    ]
+}

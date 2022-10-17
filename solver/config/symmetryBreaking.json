@@ -1,0 +1,41 @@
+{
+    "SB-Source": "SymmetryBreaking.mzn",
+    "SB-Constraints": [
+        {
+            "Tag": "L",
+            "Constraint": "L(AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "PR",
+            "Constraint": "PR(Price, VM, [Start]);\n"
+        },
+        {
+            "Tag": "LX",
+            "Constraint": "LX(AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "LPR",
+            "Constraint": "LPR(Price, AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "PRL",
+            "Constraint": "PRL(Price, AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "LLX",
+            "Constraint": "LLX(AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "PRLX",
+            "Constraint": "PRLX(Price, AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "LPRLX",
+            "Constraint": "LPRLX(Price, AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        },
+        {
+            "Tag": "PRLLX",
+            "Constraint": "PRLLX(Price, AssignmentMatrix, NoComponents, VM, [Start]);\n"
+        }
+    ]
+}
