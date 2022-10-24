@@ -2,9 +2,11 @@
 
 {% block content %}
 <section class="py-5">
-    <h2>The optimal solution is:</h2>
     <div class="container px-4 px-lg-5 my-5">
-        <textarea  id="output" class="col-md-6" style="height: 400px; width: 100%" readonly=1>...</textarea>
+        <h2>The optimal solution is:</h2>
+    </div>
+    <div class="container px-4 px-lg-5 my-5">
+        <textarea  id="output" class="col-md-6 textinput" style="height: 400px; width: 100%" readonly=1>{{result}}</textarea>
     </div>
 </section>
 {% endblock %}

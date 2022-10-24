@@ -10,13 +10,16 @@
         <button id="button-2" onclick="copyText2()" class="button-2">Example 2</button>
         <button id="button-3" onclick="copyText3()" class="button-2">Example 3</button>
     </div>
-    <form action="POST">
+    <form id="result_form" method="GET" action="/result">
+        <input type="hidden" value="true" name="test">
         <div class="container px-4 px-lg-5 my-5">
-            <textarea  id="json_input" style="height: 400px; width: 100%;" class="col-md-6">Enter your schema...</textarea>
+            <label for="json_input">Enter your schema...</label>
+            <textarea id="json_input" name="json_input" style="height: 400px; width: 100%;" class="col-md-6"></textarea>
+        </div>
+        <div class="container px-4 px-lg-5 my-5">
+            <button class="button-2" type="submit">Submit</button>
         </div>
     </form>
-    <div class="container px-4 px-lg-5 my-5">
-        <button class="button-2">Submit</button>
-    </div>
+
 </section>
 {% endblock %}

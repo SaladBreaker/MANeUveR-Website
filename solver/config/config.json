@@ -26,7 +26,7 @@
             "Extension": "dzn",
 
             "Offer-Numbers": [
-                20, 40, 250, 500
+                20
             ]
         },
         {
@@ -36,7 +36,7 @@
             "Extension": "json",
 
             "Offer-Numbers": [
-                20, 40, 250, 500
+                20
             ]
         }
     ],
@@ -44,39 +44,36 @@
     "Surrogate-Config": [
         {
             "Type": "MiniZinc",
-        
+
             "Model-Path": "Models/Surrogate/MiniZinc",
             "Model-Extension": "mzn",
-            "Enabled": true,
+            "Enabled": false,
 
             "Output-Path": "Data/",
             "Output-Extension": "csv"
         },
         {
-            "Model-Path": "Models/Surrogate/Json",
+            "Model-Path": "Models/Surrogate/json",
             "Model-Extension": "json",
             "Type": "JSON",
 
             "Enabled": true,
 
-            "Output-Path": "Data/",
+            "Output-Path": "Data",
             "Output-Extension": "csv"
         }
     ],
 
     "Test-Config": {
-        "Repetitions": 3,
+        "Repetitions": 1,
 
-        "Symmetry-Breaking": false,
+        "Symmetry-Breaking": true,
         "Symmetry-Breaker-List": [
-            "FV", "PR", "L", "LX",
-            "FVPR", "FVL", "FVLX", "PRL", "PRLX", "LPR", "LLX",
-            "FVPRL", "FVPRLX", "FVLPR", "FVLLX", "PRLLX", "LPRLX",
-            "FVPRLLX", "FVLPRLX"
+            "FVPR"
         ],
 
         "Output-Path": "Output",
-        
+
         "Solver-Config-File": "Config/solvers.json",
         "Use-Case-Config-File": "Config/useCases.json",
         "MiniZinc-SB-File": "Config/symmetryBreaking.json"

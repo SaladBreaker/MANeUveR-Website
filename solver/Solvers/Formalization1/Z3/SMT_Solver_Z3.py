@@ -3,7 +3,6 @@ from Solvers.Core.ManuverSolver import ManuverSolver
 import time
 
 class Z3_Solver_Int_Parent(ManuverSolver):#ManeuverProblem):
-
     def _initSolver(self):
         """
         Initializes the solver
@@ -456,21 +455,27 @@ class Z3_Solver_Int_Parent(ManuverSolver):#ManeuverProblem):
         if status == sat:
             model = self.solver.model()
             a_mat = []
+            print("Assignment matrix")
             for i in range(self.nrComp):
                 l = []
                 for k in range(self.nrVM):
                     l.append(model[self.a[i * self.nrVM + k]])
                 a_mat.append(l)
-            #print("Price for each machine")
+            for l in a_mat:
+                print(l)
             vms_price = []
             for k in range(self.nrVM):
                 vms_price.append(int(self.convert_price(model[self.PriceProv[k]]) * 1000))
-            #print(vms_price)
-            #print("Type for each machine")
+            print("Price for each machine", vms_price)
+            minprice = 0
+            for p in vms_price:
+                minprice = minprice + p
+            print("Min price", minprice)
+            print("Type for each machine")
             vms_type = []
             for k in range(self.nrVM):
                 vms_type.append(model[self.vmType[k]])
-            #print(vms_type)
+            print(vms_type)
         else:
             print("UNSAT")
         if self.solverTypeOptimize:

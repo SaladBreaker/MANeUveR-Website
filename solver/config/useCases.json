@@ -2,10 +2,10 @@
     "Use-Cases": [
         {
             "Name": "WordPress", 
-            "Enabled": true,
+            "Enabled": false,
 
-            "Model-Name": "Wordpress", 
-            "Scaling-Components": true, 
+            "Model-Name": "Wordpress",
+            "Scaling-Components": true,
             "Components": [
                 {
                     "Name": "WPInstances",
@@ -14,22 +14,22 @@
                 }
             ],
 
-            "Surrogate-Problem": true, 
+            "Surrogate-Problem": true,
             "Surrogate-Model-Name": "Wordpress_Surrogate"
-        }, 
+        },
         {
-            "Name": "Oryx2 Application", 
-            "Enabled": true,
-            
-            "Model-Name": "Oryx2", 
-            "Scaling-Components": false, 
-            
-            "Surrogate-Problem": true, 
+            "Name": "Oryx2 Application",
+            "Enabled": false,
+
+            "Model-Name": "Oryx2",
+            "Scaling-Components": false,
+
+            "Surrogate-Problem": true,
             "Surrogate-Model-Name": "Oryx2_Surrogate"
-        }, 
+        },
         {
-            "Name": "Secure Web Container", 
-            "Enabled": true,
+            "Name": "Secure Web Container",
+            "Enabled": false,
             
             "Model-Name": "SecureWeb", 
             "Scaling-Components": false, 

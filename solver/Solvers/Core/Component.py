@@ -3,7 +3,6 @@ class Component:
                  keywords, operatingSystem):
         self.id = id
         self.name = name
-
         # hardware description
         self.HC = cpus
         self.HCType = gpu
@@ -11,12 +10,10 @@ class Component:
         self.HS = storageSize
         self.HSType = storageType
         self.HSValue =storageValue
-        
         # network description
         self.NIn = netIn
         self.NOut = netOut
         self.NConnections = netConnections
-        
         # other information
         self.keywords = keywords
         self.operatingSystem = operatingSystem
@@ -30,8 +27,10 @@ class Component:
         self.fullDeployedComponent = False
         self.numberOfInstancesDependences = set()
 
+
     def getInstances(self):
         return self.minimumNumberOfInstances
+
 
     def getMinimumPossibleNumberOfInstances(self, comps_set):
         """
