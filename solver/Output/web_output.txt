@@ -1,0 +1,8 @@
+Assignment matrix 
+[0, 1, 0] 
+[0, 0, 1] 
+[1, 0, 0] 
+Price for each machine [379, 402, 128] 
+Min price 909
+Type for each machine
+[15, 13, 17]

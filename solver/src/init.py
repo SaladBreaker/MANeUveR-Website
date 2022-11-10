@@ -1,7 +1,9 @@
+import os
 from json import load
 from os.path import exists
 from os import makedirs
 
+BASE_PATH = "/".join(os.path.dirname(__file__).split("/")[:-1])
 """
 The script provides functions used in all other scripts.
 
@@ -11,6 +13,7 @@ The script provides functions used in all other scripts.
 
 For more information regarding the functions, read their documentation.
 """
+
 
 def parse_config(config_path: str = "Config/config.json"):
     """
@@ -30,7 +33,7 @@ def parse_config(config_path: str = "Config/config.json"):
     test_settings = {}
     solvers = []
     use_cases = []
-    
+
     solver_config = 0
     use_case_config = 0
 
@@ -46,7 +49,10 @@ def parse_config(config_path: str = "Config/config.json"):
             #
             # Loading source details
             #
+
             for item in data["Source-Config"]:
+                item["Path"] = f"{BASE_PATH}/{item['Path']}"
+
                 if item["Type"] == "MiniZinc":
                     sat_settings["model_path"] = item["Path"]
                     sat_settings["model_ext"] = item["Extension"]
@@ -59,12 +65,14 @@ def parse_config(config_path: str = "Config/config.json"):
 
                 else:
                     log("INIT", "ERROR", "Invalid source configuration.")
-                    exit(1)
+                    raise Exception("Invalid source configuration.")
 
             #
             # Loading input details
             #
             for item in data["Input-Config"]:
+                item["Path"] = f"{BASE_PATH}/{item['Path']}"
+
                 if item["Type"] == "MiniZinc":
                     sat_settings["input_path"] = item["Path"]
                     sat_settings["input_ext"] = item["Extension"]
@@ -77,27 +85,29 @@ def parse_config(config_path: str = "Config/config.json"):
 
                 else:
                     log("INIT", "ERROR", "Invalid input configuration.")
-                    exit(2)
+                    raise Exception("Invalid source configuration.")
 
             #
             # Loading surrogate details
             #
             for item in data["Surrogate-Config"]:
+                item["Output-Path"] = f"{BASE_PATH}/{item['Output-Path']}"
+                item["Model-Path"] = f"{BASE_PATH}/{item['Model-Path']}"
+
                 if item["Type"] == "MiniZinc":
                     sat_settings["surrogate_output_path"] = item["Output-Path"]
                     sat_settings["surrogate_output_ext"] = item["Output-Extension"]
                     sat_settings["surrogate_path"] = item["Model-Path"]
                     sat_settings["surrogate_ext"] = item["Model-Extension"]
-                    sat_settings["build_surrogate"] = item['Enabled']
+                    sat_settings["build_surrogate"] = item["Enabled"]
 
                 elif item["Type"] == "JSON":
                     smt_settings["surrogate_output_path"] = item["Output-Path"]
                     smt_settings["surrogate_output_ext"] = item["Output-Extension"]
                     smt_settings["surrogate_path"] = item["Model-Path"]
                     smt_settings["surrogate_ext"] = item["Model-Extension"]
-                    smt_settings["build_surrogate"] = item['Enabled']
+                    smt_settings["build_surrogate"] = item["Enabled"]
 
-                
                 else:
                     log("INIT", "ERROR", "Invalid surrogate configuration.")
                     exit(3)
@@ -106,9 +116,9 @@ def parse_config(config_path: str = "Config/config.json"):
             # Loading testing details
             #
             item = data["Test-Config"]
-            
+
             test_settings["runs"] = item["Repetitions"]
-            test_settings["output_path"] = item["Output-Path"]
+            test_settings["output_path"] = f"{BASE_PATH}/{item['Output-Path']}"
 
             if item["Symmetry-Breaking"] == True:
                 test_settings["symmetry_breakers"] = item["Symmetry-Breaker-List"]
@@ -129,7 +139,7 @@ def parse_config(config_path: str = "Config/config.json"):
     settings["JSON"] = smt_settings
     settings["Test"] = test_settings
 
-    with open(solver_config, "r") as file:
+    with open(f"{BASE_PATH}/{solver_config}", "r") as file:
         try:
             data = load(file)
 
@@ -146,8 +156,8 @@ def parse_config(config_path: str = "Config/config.json"):
         except KeyError:
             log("INIT", "ERROR", "Unknown key in solver configuration")
             exit(1)
-    
-    with open(use_case_config, "r") as file:
+
+    with open(f"{BASE_PATH}/{use_case_config}", "r") as file:
         try:
             data = load(file)
 
@@ -162,7 +172,7 @@ def parse_config(config_path: str = "Config/config.json"):
                     if item["Scaling-Components"] == True:
                         for component in item["Components"]:
                             temp["components"].append(component)
-                    
+
                     if item["Surrogate-Problem"] == True:
                         temp["surrogate"] = item["Surrogate-Model-Name"]
 
@@ -175,6 +185,7 @@ def parse_config(config_path: str = "Config/config.json"):
     settings["Solvers"] = solvers
     settings["Use-Cases"] = use_cases
 
+
 def log(phase: str, severity: str, message: str):
     """
     Prints logs to console output
@@ -185,6 +196,7 @@ def log(phase: str, severity: str, message: str):
         message (str): The message
     """
     print("[", phase, "]\t\t[", severity, "] > ", message)
+
 
 def create_directory(directory_name):
     """
