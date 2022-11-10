@@ -20,6 +20,12 @@ def bad_request(e):
     return render_template("400.html"), 400
 
 
+@app.errorhandler(500)
+def bad_request(e):
+    # note that we set the 404 status explicitly
+    return render_template("500.html"), 500
+
+
 @app.route("/")
 @app.route("/home")
 def home():
