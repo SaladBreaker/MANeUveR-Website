@@ -74,8 +74,8 @@
 
         "Output-Path": "Output",
 
-        "Solver-Config-File": "Config/solvers.json",
-        "Use-Case-Config-File": "Config/useCases.json",
-        "MiniZinc-SB-File": "Config/symmetryBreaking.json"
+        "Solver-Config-File": "config/solvers.json",
+        "Use-Case-Config-File": "config/useCases.json",
+        "MiniZinc-SB-File": "config/symmetryBreaking.json"
     }
 }
