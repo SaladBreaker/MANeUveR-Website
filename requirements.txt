@@ -1,30 +1,36 @@
-absl-py @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/84/6a/97/5f87468a626efa1af1bcdf1c33eae2b13b47429f7c896a258c485a8ffe/absl_py-1.3.0-py3-none-any.whl
-black @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/73/3c/45/33aec55a6ea8da23b87c418148e7bb9063754af7a548bbd4a4a5529733/black-22.10.0-1fixedarch-cp39-cp39-macosx_11_0_x86_64.whl
-certifi @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/78/43/55/e2d2f2893d03d62627dce642e454bdeff9756d03980f561a267eb156df/certifi-2022.9.24-py3-none-any.whl
-charset-normalizer @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/3e/99/e2/360c4ab5408a60c2f59e1f90b0e788ec410f1ebc0921724075288f9af9/charset_normalizer-2.1.1-py3-none-any.whl
-click @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/9d/ca/2f/bc3cc4a294e96f355d01d24ac6fefdde4c6286f9f63b7ce1c91d5f0c22/click-8.1.3-py3-none-any.whl
-docloud @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/b5/fa/11/2db7099fd0071c2450c2748111aea40989f4315b0db57e057abbf28eb9/docloud-1.0.375.tar.gz
-docplex @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/f3/b3/cd/84e57a77eaab606fbad5d1dbce28d46d3ea1d349c2bc3a40c9c0d11abf/docplex-2.23.222.tar.gz
-Flask @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/48/4f/da/b2833f6240f33e16e4f70afe1caf3745166703f87516f0441ecd6c4b70/Flask-2.2.2-py3-none-any.whl
-gunicorn @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/d4/22/ea/fb991f1fdb4e8ae8fd30e0bce3c23ece991aa75df3f5a4c4f4d5aba6ae/gunicorn-20.1.0-py3-none-any.whl
-idna @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/a9/f2/65/df91fc5f4e7bf1bb8b8d4b9da51737a5fe4b70fe4f5034466ec4335ed6/idna-3.4-py3-none-any.whl
-importlib-metadata @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/04/91/da/cf1b2f67d996a4def10ed9ef7dd93acccb7997dad5992adf7cb29ee67a/importlib_metadata-5.0.0-py3-none-any.whl
-itsdangerous @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/b3/40/da/c61f3b68f2a84aab75e63d44ee5e3dd70c23f1915adb75068053148351/itsdangerous-2.1.2-py3-none-any.whl
-Jinja2 @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/03/94/a8/08397f6fc37e01c8e8b6a33b514be99392ee894e8bff66c3a428238373/Jinja2-3.1.2-py3-none-any.whl
-MarkupSafe @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/a0/d0/76/86b4fe187bb88819b55f7d889a4a4a4647de6b303e4d35a1f15e633501/MarkupSafe-2.1.1-cp39-cp39-macosx_10_9_x86_64.whl
-minizinc @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/15/5f/51/1c9d25925b567008befcf379f4eafa44aaca2064ce4cb6db68a73ef8b8/minizinc-0.7.0-py3-none-any.whl
-mypy-extensions @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/92/45/bf/1807ce854ff668d92602207a37bfa9316def2a3f257bd03c4c5be4bc9b/mypy_extensions-0.4.3-py2.py3-none-any.whl
-networkx @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/1e/68/83/2e51b0f3612967b542fb98dff9de0eccde4ed70cf0b11c24cf0a6ce090/networkx-2.8.7-py3-none-any.whl
-numpy @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/ef/fb/f1/659dd95ce09911f6785378f7e912988351553d109da29332dfb9aee2c7/numpy-1.23.4-cp39-cp39-macosx_10_9_x86_64.whl
-ortools @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/29/dc/01/35644008d1fd280644cd3bcc63d67ccb3a30cf66488ee5dc0353633f52/ortools-9.4.1874-cp39-cp39-macosx_10_15_x86_64.whl
-pathspec @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/04/32/03/7c310d4aceefc0e7957e10c552210df93b450abd851a05e61f353004f9/pathspec-0.10.1-py3-none-any.whl
-platformdirs @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/83/58/96/835da8aa874177dfb0972a329248843eaf921c6b27b096e4572ae2b171/platformdirs-2.5.2-py3-none-any.whl
-protobuf @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/c9/09/8f/410925da3dea6386afdd2deac18cf2703a8f725e80697b5e929aa52e4c/protobuf-4.21.7-cp37-abi3-macosx_10_9_universal2.whl
-requests @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/96/68/40/1b2019f1ca6a6d07b2a3107daab4dca1e11111be3af28a435f7cd0463a/requests-2.28.1-py3-none-any.whl
-six @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/08/9f/47/c16ae03035fc69eaf100ea39657a49baaeef714e25a52575710c34cd48/six-1.16.0-py2.py3-none-any.whl
-tomli @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/73/7c/d9/9f2752fc5b05f9176c6f3adc6484be1cec75a68925b8c5fe39d6493a07/tomli-2.0.1-py3-none-any.whl
-typing_extensions @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/8c/7a/5f/bbb0dabe953a772f3ec2ff8510d80c1e12a2856112b40736f4fb68aa38/typing_extensions-4.4.0-py3-none-any.whl
-urllib3 @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/af/0a/28/df174fdcb31e5a78bcea2260eb915eda3b5df188b91a0884307973699f/urllib3-1.26.12-py2.py3-none-any.whl
-Werkzeug @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/a8/b9/10/d38e9304d486f9398ab4163054bd6af79c74073ad8685d6cc67f88eccc/Werkzeug-2.2.2-py3-none-any.whl
-z3-solver @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/dc/16/3a/f45b1732c0d5f863a16381c8797047b29ad31c61fe6f1a46df1202a42e/z3_solver-4.11.2.0-py2.py3-none-macosx_10_16_x86_64.whl
-zipp @ file:///Users/vladluca/Library/Caches/pypoetry/artifacts/47/6a/83/f06c21fe05b08ca118d5d39bb7d0310144b219de7857bae580279b8377/zipp-3.9.0-py3-none-any.whl
+absl-py==1.3.0
+black==22.10.0
+certifi==2022.9.24
+charset-normalizer==2.1.1
+click==8.1.3
+docloud==1.0.375
+docplex==2.23.222
+Flask==2.2.2
+gunicorn==20.1.0
+idna==3.4
+importlib-metadata==5.0.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.1
+minizinc==0.7.0
+mypy-extensions==0.4.3
+networkx==2.8.7
+numpy==1.23.4
+ortools==9.4.1874
+pathspec==0.10.1
+pip==22.1.2
+platformdirs==2.5.2
+protobuf==4.21.7
+requests==2.28.1
+setuptools==62.6.0
+six==1.16.0
+tomli==2.0.1
+typing_extensions==4.4.0
+urllib3==1.26.12
+Werkzeug==2.2.2
+wheel==0.37.1
+z3-solver==4.11.2.0
+zipp==3.9.0
+
+[notice] A new release of pip available: 22.1.2 -> 22.3.1
+[notice] To update, run: pip install --upgrade pip
