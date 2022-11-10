@@ -15,7 +15,7 @@ For more information regarding the functions, read their documentation.
 """
 
 
-def parse_config(config_path: str = "Config/config.json"):
+def parse_config(config_path: str = "config/config.json"):
     """
     This function opens the configuration files and extracts all the necessary settings
     for the scripts to run properly.

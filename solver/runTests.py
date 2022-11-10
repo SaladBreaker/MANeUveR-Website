@@ -374,7 +374,7 @@ def run_tests():
 def main():
     try:
         log("INIT", "INFO", "Starting script, reading config file")
-        config_path = f"{os.path.dirname(__file__)}/Config/config.json"
+        config_path = f"{os.path.dirname(__file__)}/config/config.json"
         parse_config(config_path)
     except Exception as e:
         log(
