@@ -109,6 +109,20 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -337,7 +351,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "7213d8c1d6ecad380badf7000eb10b9e7fdc2c25582a85c99ffbd855f02b8f4c"
+content-hash = "e28e63ff01265f0154fc0f5da46e5aa6d41fa5e95f1314ee1362d1460242a254"
 
 [metadata.files]
 absl-py = []
@@ -349,6 +363,7 @@ colorama = []
 docloud = []
 docplex = []
 flask = []
+gunicorn = []
 idna = []
 importlib-metadata = []
 itsdangerous = []

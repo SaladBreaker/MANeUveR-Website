@@ -49,3 +49,7 @@ def get_result():
         solver_result = f.read()
 
     return render_template("result.html", result=solver_result)
+
+
+if __name__ == "__main__":
+    app.run(port=5055, debug=False)
