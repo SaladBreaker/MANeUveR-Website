@@ -55,11 +55,95 @@
             "keywords": [],
             "operatingSystem": "",
             "preferences": {}
+        },
+        {
+            "id": 4,
+            "name": "SQLServer",
+            "Compute": {
+                "CPU": 2,
+                "GPU": "false",
+                "Memory": 512
+            },
+            "Storage": {
+                "StorageType": "HDD",
+                "StorageSize": 2000
+            },
+            "Network": {},
+            "keywords": [],
+            "operatingSystem": "",
+            "preferences": {}
+        },
+        {
+            "id": 5,
+            "name": "LoadBalancer",
+            "Compute": {
+                "CPU": 4,
+                "GPU": "false",
+                "Memory": 2048
+            },
+            "Storage": {
+                "StorageType": "HDD",
+                "StorageSize": 500
+            },
+            "Network": {},
+            "keywords": [],
+            "operatingSystem": "",
+            "preferences": {}
+        },
+        {
+            "id": 6,
+            "name": "Test",
+            "Compute": {
+                "CPU": 2,
+                "GPU": "false",
+                "Memory": 512
+            },
+            "Storage": {
+                "StorageType": "HDD",
+                "StorageSize": 2000
+            },
+            "Network": {},
+            "keywords": [],
+            "operatingSystem": "",
+            "preferences": {}
         }
     ],
     "IP": {
         "publicIPs": 1,
         "IPType": "IP4"
     },
-    "restrictions": []
+    "restrictions": [
+        {
+            "type": "Conflicts",
+            "alphaCompId": 1,
+            "compsIdList": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "type": "Conflicts",
+            "alphaCompId": 5,
+            "compsIdList": [
+                3,
+                4
+            ]
+        },
+        {
+            "type": "EqualBound",
+            "compsIdList": [
+                1
+            ],
+            "bound": 1
+        },
+        {
+            "type": "EqualBound",
+            "compsIdList": [
+                5
+            ],
+            "bound": 1
+        }
+    ]
 }
